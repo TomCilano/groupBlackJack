@@ -8,9 +8,9 @@ import java.util.List;
 public class Player {
 
     public String name;
-    public List <Cards> cards;
+    public List <Card> cards;
 
-    public Player(String name, List<Cards> cards) {
+    public Player(String name, List<Card> cards) {
         this.name = name;
         this.cards = cards;
 
@@ -28,11 +28,11 @@ public class Player {
         this.name = name;
     }
 
-    public List<Cards> getCards() {
+    public List<Card> getCards() {
         return cards;
     }
 
-    public void setCards(List<Cards> cards) {
+    public void setCards(List<Card> cards) {
         this.cards = cards;
     }
 }
