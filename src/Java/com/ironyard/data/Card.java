@@ -26,10 +26,18 @@ public class Card {
         this.owner = owner;
         this.suit = suit;
     }
-    public String toString (){
-        return name ;
+
+    /**
+     * This method overwrite the toString method in this class.
+     * When called it will return the
+     *
+     * @return name
+     */
+    public String toString() {
+        return name;
     }
-    public static List<Card> createDeck(){
+
+    public static List<Card> createDeck() {
         List<Card> deck = new ArrayList<>();
         for (SUIT aSuit : SUIT.values()) {
             // cards 2 - 10
@@ -46,13 +54,6 @@ public class Card {
         return deck;
     }
 
-    public SUIT getSuit() {
-        return suit;
-    }
-
-    public void setSuit(SUIT suit) {
-        this.suit = suit;
-    }
 
     public int getValue() {
         return value;
@@ -78,5 +79,11 @@ public class Card {
         this.owner = owner;
     }
 
+    public SUIT getSuit() {
+        return suit;
+    }
 
+    public void setSuit(SUIT suit) {
+        this.suit = suit;
+    }
 }
