@@ -71,7 +71,7 @@ public class Card {
         this.name = name;
     }
 
-    public Player getOwner() {
+    public Player getOwner(Player player) {
         return owner;
     }
 

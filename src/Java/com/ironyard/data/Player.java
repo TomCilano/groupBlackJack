@@ -8,24 +8,21 @@ import java.util.List;
 public class Player {
 
     public String name;
-    public int hand;
+    public List hand;
     public List <Card> cards;
 
-
-    public Player(String name, int hand, List<Card> cards) {
+    public Player(String name, List hand, List<Card> cards) {
         this.name = name;
         this.hand = hand;
         this.cards = cards;
     }
 
-    // player takes a hit
 
+    // player takes  gets a hand
 
-
-    public static void playerHit (Card c){
-
-
-
+    public void playerGetsOneCard(Card c){
+        c.getOwner(this);
+        cards.add(c);
     }
 
     public String getName() {
@@ -36,11 +33,11 @@ public class Player {
         this.name = name;
     }
 
-    public int getHand() {
+    public List getHand() {
         return hand;
     }
 
-    public void setHand(int hand) {
+    public void setHand(List hand) {
         this.hand = hand;
     }
 
@@ -51,4 +48,5 @@ public class Player {
     public void setCards(List<Card> cards) {
         this.cards = cards;
     }
-}
+
+
